@@ -3,15 +3,15 @@ const minuteHand=document.querySelector(".minute-hand");
 const secondHand=document.querySelector(".second-hand");
 //Date obj created
 function setDate(){
-    const now= new Date();
+    const now= new Date();    
     return now;
 }
 //Analog code
 function setanalogDate(){
-    const now=setDate();    
+    const now = setDate();
     const seconds=now.getSeconds();
     const minutes=now.getMinutes();
-    const hours=now.getHours();
+    const hours=now.getHours(); 
     
     const secondsDegrees = ((seconds / 60) * 360) + 90;
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
@@ -30,7 +30,7 @@ function setdigitaldate(){
     const now = setDate();
     let hours=now.getHours();
     let minutes=now.getMinutes();
-    let seconds=now.getSeconds();
+    let seconds=now.getSeconds(); 
     let am_pm = "AM";
     // Setting time for 12 Hrs format
     if (hours >= 12) {
